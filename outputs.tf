@@ -1,7 +1,14 @@
-output "s3_bucket_id" {
-  value = "${aws_s3_bucket.this.id}"
+output "bucket_id" {
+  description = "The name of the bucket"
+  value       = "${aws_s3_bucket.this.id}"
 }
 
-output "s3_bucket_arn" {
-  value = "${aws_s3_bucket.this.arn}"
+output "bucket_arn" {
+  description = "The ARN of the bucket"
+  value       = "${aws_s3_bucket.this.arn}"
+}
+
+output "bucket_region" {
+  description = "The AWS region this bucket resides in"
+  value       = "${aws_s3_bucket.this.region}"
 }
